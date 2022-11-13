@@ -14,8 +14,7 @@ void rb(t_stack *stack)
     x = 0;
     while(x<stack->stack_b_size-1)
     {
-        printf("%d",x);
-        stack->stack_b[x] = stack->temp[x+1];
+        stack->stack_b[x] = stack->temp[x];
         x++;
     }
     stack->stack_b[(stack->stack_b_size)]=stack->temp1;

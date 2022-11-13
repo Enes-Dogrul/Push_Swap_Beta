@@ -20,4 +20,5 @@ void ra(t_stack *stack)
     x--;
     stack->stack_a[(stack->stack_a_size)-2]=stack->temp1;
     free(stack->temp);
+    printf("ra\n");
 }

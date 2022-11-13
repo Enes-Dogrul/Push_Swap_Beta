@@ -43,9 +43,7 @@ int main(int argc,char **argv)
     print_stack(stack);
     pb(&stack);
     pb(&stack);
-    pb(&stack);
-    pb(&stack);
     print_stack(stack);
-    rb(&stack);
+    rr(&stack);
     print_stack(stack);
 }

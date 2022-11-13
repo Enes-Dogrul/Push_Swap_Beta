@@ -43,7 +43,7 @@ void pa_insert1_a(t_stack *stack)
 {
     int x;
     x = 0;
-    while (stack->temp[x])
+    while (x<stack->stack_a_size)
     {
         stack->stack_a[x] = stack->temp[x];
         x++;
