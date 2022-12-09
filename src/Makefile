@@ -1,0 +1,19 @@
+NAME    := push_swap
+LIBFT 	:= ../Libft/libft.a
+CC      := clang
+CFLAGS  := -Wall -Wextra -Werror -I. 
+FILES   := $(shell find . -type f -name "*.c")
+OBJ     := $(FILES:%.c=%.o)
+all: $(NAME)
+$(NAME): $(OBJ)
+	@make -C ../Libft
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIBFT)
+	rm -f $(shell find . -type f -name "*.o")
+clean:
+	@make clean -C ../Libft
+	@rm -f *.o
+fclean: clean
+	@make fclean -C ../Libft
+	@rm -f $(NAME)
+re: fclean all
+.PHONY: all bonus clean fclean re

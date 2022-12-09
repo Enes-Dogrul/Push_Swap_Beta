@@ -1,0 +1,16 @@
+#include "../../library/push_swap.h"
+
+int check_sorted(t_stack *stack)
+{
+    int x;
+
+    x = 0;
+    while (stack->stack_a[x+1])
+    {
+        if(stack->stack_a[x]>stack->stack_a[x+1])
+            return(1);
+        x++;
+    }
+    return (0);
+    
+}
