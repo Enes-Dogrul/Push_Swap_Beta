@@ -8,7 +8,7 @@ int find_biggest_number(t_stack *stack)
     biggest_number = stack->stack_b[0];
     while(x < stack->stack_b_size)
     {
-        if (biggest_number>stack->stack_b[x])
+        if (biggest_number<stack->stack_b[x])
             biggest_number = stack->stack_b[x];
         x++;
     }

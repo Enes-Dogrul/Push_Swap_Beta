@@ -7,13 +7,16 @@ void short_argv_2(t_stack *stack)
 }
 
 void short_argv_3(t_stack *stack)
-{ 
-		if (stack->stack_a[0] == stack->max)
-			ra(stack);
-		if (stack->stack_a[1] == stack->max)
-			rra(stack);
-		if (stack->stack_a[0] > stack->stack_a[1])
-			sa(stack);
+{
+    while(check_sorted(stack))
+    {
+        if (stack->stack_a[0] > stack->stack_a[2] && stack->stack_a[1] > stack->stack_a[0])
+            rra(stack);
+        else if (stack->stack_a[0] > stack->stack_a[1] && stack->stack_a[0] > stack->stack_a[2])
+            ra(stack);
+        else
+            sa(stack);
+    }
 }
 
 void short_argv_5_10(t_stack *stack)
@@ -35,6 +38,8 @@ void short_sort(t_stack *stack)
         short_argv_2(stack);
     else if(stack->stack_a_size == 3)
         short_argv_3(stack);
-    else if(stack->stack_a_size >= 4 && stack->stack_a_size <= 10)
+    else if(stack->stack_a_size >=4 && stack->stack_a_size <= 10)
         short_argv_5_10(stack);
+    else if(stack->stack_a_size >10 && stack->stack_a_size <= 100)
+        short_argv_11_100(stack);
 }

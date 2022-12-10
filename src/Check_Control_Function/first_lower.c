@@ -51,7 +51,6 @@ void lowest_first(t_stack *stack,int index)
     sayi = stack->stack_a[index];
     buyuk_bulucu(stack,sayi,index);
 }
-
 void first_lower(t_stack *stack)
 {
     int index;

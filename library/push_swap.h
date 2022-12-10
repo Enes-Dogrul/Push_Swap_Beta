@@ -1,6 +1,7 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
+
 #include <stdlib.h>
 #include <stdio.h>
 #include "../Libft/libft.h"
@@ -12,6 +13,7 @@ typedef struct stack
     int *stack_b;
     int *temp;
     int temp1;
+    int *temp_array_a;
     int max;
     int min;
     int stack_a_size;
@@ -40,6 +42,8 @@ void find_min(t_stack *stack);
 int find_lowest_number(t_stack *stack);
 int find_biggest_number(t_stack *stack);
 void buyuk_bulucu(t_stack *stack,int sayi,int index);
+void lowest_first(t_stack *stack,int index);
+int find_low_number2(t_stack *stack,int x);
 //first_lower && first bigger
 void first_lower(t_stack *stack);
 void first_biggest(t_stack *stack);
@@ -48,5 +52,13 @@ int check_sorted(t_stack *stack);
 void short_sort(t_stack *stack);
 void sorting_100(t_stack *stack);
 void print_stack(t_stack *stack);
+void selectionSort(int *temp_stack,int size);
+void short_argv_11_100(t_stack *stack);
+
+//Struct_init
+void struct_split(char **av,t_stack *stack);
+void struct_argv(int ac,char **av,t_stack *stack);
+void create_stack(t_stack *stack,int size);
+int check_argv(char **tmp,int x,int y);
 
 #endif

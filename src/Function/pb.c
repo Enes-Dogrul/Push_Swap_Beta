@@ -13,10 +13,10 @@ void stack_temp1_b(t_stack *stack)
     free(stack->stack_b);
     stack->stack_b = malloc(sizeof(int)*stack->stack_b_size);
     stack->stack_b[0]=stack->stack_a[0];
-    x = 0;
+    x = 1;
     while (x < stack->stack_b_size )
     {    
-        stack->stack_b[x+1] = stack->temp[x];
+        stack->stack_b[x] = stack->temp[x - 1];
         x++;
     }
     free(stack->temp);

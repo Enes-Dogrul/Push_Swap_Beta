@@ -30,7 +30,6 @@ void rrb(t_stack *stack)
     while(x < stack->stack_b_size)
     {
         stack->temp[x]=stack->stack_b[x];
-        printf("Index[ %d]: %d",x,stack->stack_b[x]);
         x++;
     }
     stack->temp1 = stack->stack_b[stack->stack_b_size - 1];
