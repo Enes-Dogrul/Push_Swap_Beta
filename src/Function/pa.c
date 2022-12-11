@@ -49,5 +49,6 @@ void pa(t_stack *stack)
     stack->stack_b_size -= 1;
     stack_temp_a(stack);
     stack_temp_b(stack);
+    stack->hamlesayisi += 1;
     printf("pa\n");
 }

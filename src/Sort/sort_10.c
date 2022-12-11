@@ -42,4 +42,6 @@ void short_sort(t_stack *stack)
         short_argv_5_10(stack);
     else if(stack->stack_a_size >10 && stack->stack_a_size <= 100)
         short_argv_11_100(stack);
+    else
+        sort_argv_100_long(stack);
 }

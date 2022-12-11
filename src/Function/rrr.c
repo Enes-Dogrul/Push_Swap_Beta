@@ -18,6 +18,7 @@ void rrr_rra(t_stack *stack)
         x++;
     }
     stack->stack_a[0]=stack->temp1;
+    stack->hamlesayisi += 1;
     free(stack->temp);
 }
 
@@ -46,5 +47,6 @@ void rrr(t_stack *stack)
 {
     rrr_rra(stack);
     rrr_rrb(stack);
+    stack->hamlesayisi += 1;
     printf("rrb\n");
 }

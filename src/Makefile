@@ -1,6 +1,6 @@
 NAME    := push_swap
 LIBFT 	:= ../Libft/libft.a
-CC      := clang
+CC      := gcc
 CFLAGS  := -Wall -Wextra -Werror -I. 
 FILES   := $(shell find . -type f -name "*.c")
 OBJ     := $(FILES:%.c=%.o)

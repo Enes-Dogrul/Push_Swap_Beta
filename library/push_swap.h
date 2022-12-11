@@ -18,6 +18,7 @@ typedef struct stack
     int min;
     int stack_a_size;
     int stack_b_size;
+    int hamlesayisi;
 }t_stack;
 
 //Swap
@@ -54,11 +55,17 @@ void sorting_100(t_stack *stack);
 void print_stack(t_stack *stack);
 void selectionSort(int *temp_stack,int size);
 void short_argv_11_100(t_stack *stack);
+void sort_argv_100_long(t_stack *stack);
 
 //Struct_init
 void struct_split(char **av,t_stack *stack);
 void struct_argv(int ac,char **av,t_stack *stack);
 void create_stack(t_stack *stack,int size);
 int check_argv(char **tmp,int x,int y);
+
+//Struct Copy
+void stack_copy(t_stack *stack , int *temp_stack);
+void middle_sort_1(t_stack *stack,int *temp_stack,int keynbr);
+
 
 #endif

@@ -18,5 +18,6 @@ void ss(t_stack *stack)
 {
     ss_sa(stack);
     ss_sb(stack);
+    stack->hamlesayisi += 1;
     printf("ss\n");
 }

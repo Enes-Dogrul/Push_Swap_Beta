@@ -49,5 +49,6 @@ void pb(t_stack *stack)
     stack->stack_b_size += 1;
     stack_temp1_b(stack);
     stack_temp1_a(stack);
+    stack->hamlesayisi += 1;
     printf("pb\n");
 }

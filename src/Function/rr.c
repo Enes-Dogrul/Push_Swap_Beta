@@ -51,5 +51,6 @@ void rr(t_stack *stack)
 {
     rr_ra(stack);
     rr_rb(stack);
+    stack->hamlesayisi += 1;
     printf("rr\n");
 }

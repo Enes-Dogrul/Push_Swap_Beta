@@ -38,7 +38,7 @@ void short_argv_11_100(t_stack *stack)
     temp_stack = malloc(sizeof(int)*stack->stack_a_size);
     stack_copy(stack,temp_stack);
     selectionSort(temp_stack,stack->stack_a_size);
-    keynbr = stack->stack_a_size/4;
+    keynbr = stack->stack_a_size/10;
     artis = keynbr;
     while (x<3)
     {

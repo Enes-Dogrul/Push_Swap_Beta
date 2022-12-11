@@ -27,6 +27,7 @@ void create_stack(t_stack *stack,int size)
     stack->stack_b=malloc(sizeof(int));
     stack->stack_a_size = size;
     stack->stack_b_size = 0;
+    stack->hamlesayisi = 0;
 }
 
 int struct_init(int ac,char **av,t_stack *stack)
@@ -51,8 +52,10 @@ int main(int argc,char **argv)
         if(!(check_sorted(&stack)))
             return (0);
         short_sort(&stack);
-        //sorting_100(&stack);
-    }
-    else
         printf("\n");
+        //sorting_100(&stack);
+        print_stack(&stack);
+        printf("%d\n",stack.hamlesayisi);
+    }
+    return (0);
 }

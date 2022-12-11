@@ -20,6 +20,7 @@ void ra(t_stack *stack)
     x--;
     stack->stack_a[(stack->stack_a_size)-1]=stack->temp1;
     free(stack->temp);
+    stack->hamlesayisi += 1;
     printf("ra\n");
 }
 
@@ -42,5 +43,6 @@ void rb(t_stack *stack)
     }
     stack->stack_b[(stack->stack_b_size) - 1]=stack->temp1;
     free(stack->temp);
+    stack->hamlesayisi += 1;
     printf("rb\n");
 }
