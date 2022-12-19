@@ -12,7 +12,7 @@
 
 #include "../../library/push_swap.h"
 
-int	slowest_index_finder(t_stack *stack, int lowest_number)
+int	lowest_index_finder(t_stack *stack, int lowest_number)
 {
 	int	x;
 	int	index;

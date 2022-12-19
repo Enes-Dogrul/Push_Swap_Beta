@@ -74,7 +74,7 @@ void	buyuk_bulucu2(t_stack *stack, int sayi, int index)
 	}
 }
 
-void	sbigger_first(t_stack *stack, int index)
+void	bigger_first(t_stack *stack, int index)
 {
 	int	sayi;
 

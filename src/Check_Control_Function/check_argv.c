@@ -6,7 +6,7 @@
 /*   By: edogrul <edogrul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 21:18:29 by edogrul           #+#    #+#             */
-/*   Updated: 2022/12/15 21:20:07 by edogrul          ###   ########.fr       */
+/*   Updated: 2022/12/18 23:23:31 by edogrul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ void	struct_split(char **av, t_stack *stack)
 		stack->stack_a[x] = atoi(tmp[x]);
 		x++;
 	}
+	free(tmp);
 }
 
 void	struct_argv(int ac, char **av, t_stack *stack)

@@ -71,4 +71,5 @@ void	short_argv_11_100(t_stack *stack)
 		first_biggest(stack);
 		pa(stack);
 	}
+	free(temp_stack);
 }

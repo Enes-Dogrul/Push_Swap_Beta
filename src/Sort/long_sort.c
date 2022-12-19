@@ -41,4 +41,5 @@ void	sort_argv_100_long(t_stack *stack)
 		first_biggest(stack);
 		pa(stack);
 	}
+	free(temp_stack);
 }

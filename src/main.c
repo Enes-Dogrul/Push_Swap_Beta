@@ -6,7 +6,7 @@
 /*   By: edogrul <edogrul@student.42kocaeli.com.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 21:17:34 by edogrul           #+#    #+#             */
-/*   Updated: 2022/12/15 21:17:46 by edogrul          ###   ########.fr       */
+/*   Updated: 2022/12/18 23:24:50 by edogrul          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,11 +43,11 @@ void	check_repeat(t_stack *stack)
 	while (y < stack->stack_a_size - 1)
 	{
 		x = y + 1;
-		while (x < stack->stack_a_size - 1)
+		while (x < stack->stack_a_size)
 		{
 			if (stack->stack_a[y] == stack->stack_a[x])
 			{
-				printf("Error\n");
+				fprintf(stderr,"Error\n");
 				exit (0);
 			}
 			x++;
@@ -67,7 +67,7 @@ void	create_stack(t_stack *stack, int size)
 
 int	struct_init(int ac, char **av, t_stack *stack)
 {
-	if (ac < 1)
+	if (ac <= 1)
 		printf("Argüman 1 Den Az");
 	else if (ac == 2)
 		struct_split(av, stack);
@@ -82,15 +82,29 @@ int	main(int argc, char **argv)
 {
 	t_stack	stack;
 
-	if (argc > 1)
+	if (argc >= 2)
 	{
-		struct_init(argc,argv,&stack);
+		struct_init(argc, argv, &stack);
 		check_repeat(&stack);
 		if (!(check_sorted(&stack)))
+		{
+			free(stack.stack_a);
+			free(stack.stack_b);
 			return (0);
-		short_sort(&stack);		
+		}
+		short_sort(&stack);
 		if (!(check_sorted(&stack)))
+		{
+			free(stack.stack_a);
+			free(stack.stack_b);
 			return (0);
+		}
+	}
+	else
+	{
+		free(stack.stack_a);
+		free(stack.stack_b);
+		printf("Error\n");
 	}
 	return (0);
 }

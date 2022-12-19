@@ -58,6 +58,6 @@ char	**ft_split(const char *s, char c)
 	str = (char **)malloc(sizeof(char *) * wrdcnt + 1);
 	if (!str)
 		return (0);
-	ft_place(str, s, c, wrdcnt);
+	str = ft_place(str, s, c, wrdcnt);
 	return (str);
 }

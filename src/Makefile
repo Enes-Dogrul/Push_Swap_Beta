@@ -8,7 +8,6 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	@make -C ../Libft
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIBFT)
-	rm -f $(shell find . -type f -name "*.o")
 clean:
 	@make clean -C ../Libft
 	@rm -f *.o
